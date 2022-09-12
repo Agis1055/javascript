@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<script language="javascript">
+    //belajar variabel dan tipe data
+    var pegawai = "Ridwan";
+    var jabatan = "Manager";
+    var status = "Menikah";
+    // TV => 3 jt, Kulkas => 4 jt, AC => 5 jt
+    //struktur kendali
+    if(jabatan == 'Manager'){
+        gapok = 15000000; 
+    } 
+    else if(jabatan == 'Asisten Manager'){
+        gapok = 10000000; 
+    } 
+    else if(jabatan == 'Staff'){
+        gapok = 5000000; 
+    }
+    else{
+        gapok = 0; 
+    } 
+
+    let tunjab = 0.15 * gapok;
+    let bpjs = 0.10 * gapok;
+
+    if(status == 'Menikah'){
+        tunkel = 0.50 * gapok;
+    }
+    else {
+        tunkel = 0;
+    }
+
+    let total = gapok + tunjab + bpjs + tunkel;
+    </script>
+    
+<html>
+	<head><title>Data Pegawai</title> </head></head>
+    <body>
+        <h3 align="center">Data Pegawai</h3>
+        <table align=""center" border="1" cellspasing "3" width="100%">
+            <thead>
+            <tr>
+                <th>Data</th>
+                <th>Pegawai</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Nama Pegawai</td>
+                <td>Ridwan</td>
+            </tr>
+            <tr>
+                <td>Jabatan</td>
+                <td>Manager</td>
+            </tr>
+            <tr>
+                <td>Status</td>
+                <td>Menikah</td>
+            </tr>
+            <tr>
+                <td>Gaji Pokok</td>
+                <td><script> document.write(+ gapok) </script></td>
+            </tr>
+            <tr>
+                <td>Tunjangan Jabatan</td>
+                <td><script> document.write(+ tunjab) </script></td>
+            </tr>
+            <tr>
+                <td>Tunjangan Keluarga</td>
+                <td><script> document.write(+ tunkel) </script></td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td>Total Gaji</td>
+                <td><script> document.write(+ total) </script></td>
+            </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>
